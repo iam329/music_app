@@ -1,0 +1,83 @@
+// Place all the styles related to the StaticPages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.wrapper {	
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	display: table;
+	top: 0;
+	left: 0;
+	background: url('background.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+	text-align: center;
+}
+
+.inner-wrapper {
+	display: table-cell;
+	vertical-align: middle;
+	height: 100%;
+	width: 100%;
+
+	opacity:0;  
+	 -webkit-animation:fadeIn ease-in 1;  
+	 -moz-animation:fadeIn ease-in 1;
+	 animation:fadeIn ease-in 1;
+	 
+	 -webkit-animation-fill-mode:forwards;  
+	 -moz-animation-fill-mode:forwards;
+	 animation-fill-mode:forwards;
+	 
+	 -webkit-animation-duration:1s;
+	 -moz-animation-duration:1s;
+	 animation-duration:1s;
+}
+
+.episode {
+	font-family: Seravek-ExtraLight;
+	font-size: 16px;
+	color: #E5D6D6;
+	line-height: 20px;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+}
+
+#play {
+	height: 87.1px;
+	width: 81.8px;
+	margin: 70px auto 70px auto;
+	background: url('play.png');
+	background-repeat: no-repeat;
+	transition: transform 0.5s;
+}
+
+#play:hover {
+	transform: scale(1.1);
+	cursor: hand;
+	cursor: pointer;
+}
+
+.title {
+	font-family: Seravek-ExtraLight;
+	font-size: 24px;
+	color: #FFFFFF;
+	line-height: 29px;
+	letter-spacing: 0px;
+}
+
+.artist {
+	font-family: Seravek-ExtraLight;
+	font-size: 18px;
+	color: #AFA4A4;
+	line-height: 22px;
+	letter-spacing: 0px;
+}
