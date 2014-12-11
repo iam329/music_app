@@ -1,3 +1,21 @@
+var playlist = [
+	{
+		'episode': 1,
+		'title': 'Elysium',
+		'artist': 'Bear\'s Den',
+		'vid': 'BH-wP2TDUBQ'
+	},
+	{
+		'episode': 2,
+		'title': 'I Don\'t Want To Go Home',
+		'artist': 'Nick Mulvey',
+		'vid': 'hMQSlY6CNms'	
+	}
+]
+
+
+var currentEp = 2;
+
 // This code loads the IFrame Player API code asynchronously.
 var tag = document.createElement('script');
 
@@ -12,7 +30,7 @@ function onYouTubeIframeAPIReady() {
     player = new YT.Player('player', {
     height: window.innerHeight,
     width: window.innerWidth,
-    videoId: 'BH-wP2TDUBQ',
+    videoId: playlist[currentEp-1].vid,
     playerVars: {
     	'showinfo': 0,
     	'controls': 2,
@@ -23,20 +41,12 @@ function onYouTubeIframeAPIReady() {
     });
 }
 
-var playlist = [
-	{
-		'episode': 1,
-		'title': 'Elysium',
-		'artist': 'Bears Den'
-	}
-]
-
 $(document).ready(function(){
 	$('inner-wrapper').fadeIn(300);
 
-	$('.episode').text("Episode "+playlist[0].episode);
-	$('.title').text("''"+playlist[0].title+"''");
-	$('.artist').text(playlist[0].artist);
+	$('.episode').text("Episode "+playlist[currentEp-1].episode);
+	$('.title').text("''"+playlist[currentEp-1].title+"''");
+	$('.artist').text(playlist[currentEp-1].artist);
 
 	$('#play').click(function(){
 		$('.wrapper').fadeOut(400);
