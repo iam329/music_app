@@ -37,8 +37,17 @@ function onYouTubeIframeAPIReady() {
     	'bq': 'hd1080',
     	'color': 'red',
     	'fs': 0
+    },
+    events: {
+    	'onStateChange': onPlayerStateChange
     }
-    });
+  });
+}
+
+function onPlayerStateChange(event){
+	if(event.data == YT.PlayerState.ENDED){
+		$('.wrapper').show();
+	}
 }
 
 $(document).ready(function(){
