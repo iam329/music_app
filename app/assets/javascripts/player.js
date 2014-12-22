@@ -10,11 +10,17 @@ var playlist = [
 		'title': 'I Don\'t Want To Go Home',
 		'artist': 'Nick Mulvey',
 		'vid': 'hMQSlY6CNms'	
+	},
+	{
+		'episode': 3,
+		'title': 'Gold',
+		'artist': 'Chet Faker',
+		'vid': 'hi4pzKvuEQM'
 	}
 ]
 
 
-var currentEp = 2;
+var currentEp = 3;
 
 // This code loads the IFrame Player API code asynchronously.
 var tag = document.createElement('script');
@@ -50,6 +56,44 @@ function onPlayerStateChange(event){
 	}
 }
 
+var go = 0;
+
+function nextEp(){
+	player.stopVideo();
+	if(playlist.length>1 && currentEp < playlist.length){
+		currentEp++;
+		console.log(currentEp);
+		if(go == 1){
+			player.loadVideoById(playlist[currentEp-1].vid);	
+		}
+	}
+	else if(playlist.length>1 && currentEp == playlist.length){
+		currentEp = 1;
+		console.log(currentEp);
+		if(go == 1){
+			player.loadVideoById(playlist[currentEp-1].vid);
+		}
+	}	
+}
+
+function prevEp(){
+	player.stopVideo();
+	if(playlist.length>1 && currentEp > 1){
+		currentEp--;
+		console.log(currentEp);
+		if(go == 1){
+			player.loadVideoById(playlist[currentEp-1].vid);	
+		}
+	}
+	else if(playlist.length>1 && currentEp==1){
+		currentEp = playlist.length;
+		console.log(currentEp);
+		if(go == 1){
+			player.loadVideoById(playlist[currentEp-1].vid);
+		}
+	}
+}
+
 $(document).ready(function(){
 	$('inner-wrapper').fadeIn(300);
 
@@ -59,7 +103,42 @@ $(document).ready(function(){
 
 	$('#play').click(function(){
 		$('.wrapper').fadeOut(400);
-		player.playVideo();	
+		$('#next').css("opacity", 0.2);
+		$('#previous').fadeTo("opacity", 0.2);
+		if(go==0){
+			go = 1;
+		}
+		player.loadVideoById(playlist[currentEp-1].vid);	
+	});
+
+	$('#next').click(function(){
+		nextEp();
+		$('.episode').text("Episode "+playlist[currentEp-1].episode);
+		$('.title').text("''"+playlist[currentEp-1].title+"''");
+		$('.artist').text(playlist[currentEp-1].artist);
+	});
+
+	$('#previous').click(function(){
+		prevEp();
+		$('.episode').text("Episode "+playlist[currentEp-1].episode);
+		$('.title').text("''"+playlist[currentEp-1].title+"''");
+		$('.artist').text(playlist[currentEp-1].artist);
+	});
+
+	$('#next').mouseenter(function(){
+		$('#next').css('opacity', 1);
+	});
+
+	$('#next').mouseleave(function(){
+		$('#next').css('opacity', 0.2);
+	});
+
+	$('#previous').mouseenter(function(){
+		$('#previous').css('opacity', 1);
+	});
+
+	$('#previous').mouseleave(function(){
+		$('#previous').css('opacity', 0.2);
 	});
 
 	$(window).resize(function() {
