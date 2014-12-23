@@ -19,8 +19,9 @@ var playlist = [
 	}
 ]
 
-
 var currentEp = 3;
+
+var go = 0;
 
 // This code loads the IFrame Player API code asynchronously.
 var tag = document.createElement('script');
@@ -53,10 +54,9 @@ function onYouTubeIframeAPIReady() {
 function onPlayerStateChange(event){
 	if(event.data == YT.PlayerState.ENDED){
 		$('.wrapper').show();
+		go = 0;
 	}
 }
-
-var go = 0;
 
 function nextEp(){
 	player.stopVideo();
