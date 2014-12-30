@@ -53,8 +53,7 @@ function onYouTubeIframeAPIReady() {
 
 function onPlayerStateChange(event){
 	if(event.data == YT.PlayerState.ENDED){
-		go = 0;
-		$('.wrapper').show();
+		nextEp();
 	}
 }
 
