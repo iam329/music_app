@@ -16,10 +16,16 @@ var playlist = [
 		'title': 'Gold',
 		'artist': 'Chet Faker',
 		'vid': 'hi4pzKvuEQM'
+	},
+	{
+		'episode': 4,
+		'title': 'Bottled Up Tight',
+		'artist': 'Luke Sital-Singh',
+		'vid': '9GDFbVssI4c'
 	}
 ]
 
-var currentEp = 3;
+var currentEp = 4;
 
 var go = 0;
 
