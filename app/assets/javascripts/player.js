@@ -22,11 +22,19 @@ var playlist = [
 		'title': 'Bottled Up Tight',
 		'artist': 'Luke Sital-Singh',
 		'vid': '9GDFbVssI4c'
+	},
+	{
+		'episode': 5,
+		'title': 'Kathleen',
+		'artist': 'Catfish and the Bottlemen',
+		'vid': 'xrrcVxnjJO8'	
 	}
 ]
 
-var currentEp = 4;
+var currentEp = 5;
 
+// on opening scene go is 0 so that nextEp and prevEp only scroll through playlist carousel
+// once play button is hit go is set to 1 and nextEp and prevEp scroll and load vids
 var go = 0;
 
 // This code loads the IFrame Player API code asynchronously.
