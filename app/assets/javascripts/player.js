@@ -28,10 +28,16 @@ var playlist = [
 		'title': 'Kathleen',
 		'artist': 'Catfish and the Bottlemen',
 		'vid': 'xrrcVxnjJO8'	
+	},
+	{
+		'episode': 6,
+		'title': 'Coffee',
+		'artist': 'Sylvan Esso',
+		'vid': 'Qr5AIKRPIHo'	
 	}
 ]
 
-var currentEp = 5;
+var currentEp = 6;
 
 // on opening scene go is 0 so that nextEp and prevEp only scroll through playlist carousel
 // once play button is hit go is set to 1 and nextEp and prevEp scroll and load vids
