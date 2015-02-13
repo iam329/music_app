@@ -34,10 +34,16 @@ var playlist = [
 		'title': 'Coffee',
 		'artist': 'Sylvan Esso',
 		'vid': 'Qr5AIKRPIHo'	
+	},
+	{
+		'episode': 7,
+		'title': 'Do You Even Know?',
+		'artist': 'Rae Morris',
+		'vid': '9Nz-GlhKZVg'	
 	}
 ]
 
-var currentEp = 6;
+var currentEp = 7;
 
 // on opening scene go is 0 so that nextEp and prevEp only scroll through playlist carousel
 // once play button is hit go is set to 1 and nextEp and prevEp scroll and load vids
