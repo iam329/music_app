@@ -46,10 +46,16 @@ var playlist = [
 		'title': 'Heaven',
 		'artist': 'Amber Run',
 		'vid': 'zpFfWYO2K08'	
+	},
+	{
+		'episode': 9,
+		'title': 'Young Blood',
+		'artist': 'Saint Raymond',
+		'vid': 'kLj8aDWE-Es'	
 	}
 ]
 
-var currentEp = 8;
+var currentEp = 9;
 
 // on opening scene go is 0 so that nextEp and prevEp only scroll through playlist carousel
 // once play button is hit go is set to 1 and nextEp and prevEp scroll and load vids
