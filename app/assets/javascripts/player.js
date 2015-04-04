@@ -151,7 +151,19 @@ $(document).ready(function(){
 		if(go==0){
 			go = 1;
 		}
-		player.loadVideoById(playlist[currentEp-1].vid);	
+
+		if( navigator.userAgent.match(/Android/i)
+ 		 || navigator.userAgent.match(/webOS/i)
+ 		 || navigator.userAgent.match(/iPhone/i)
+		 || navigator.userAgent.match(/iPad/i)
+		 || navigator.userAgent.match(/iPod/i)
+		 || navigator.userAgent.match(/BlackBerry/i)
+		 || navigator.userAgent.match(/Windows Phone/i)
+ 		){
+			alert(playlist[currentEp-1]);
+ 		} else {
+ 			player.loadVideoById(playlist[currentEp-1].vid);	
+ 		}
 	});
 
 	$('#next').click(function(){
@@ -190,8 +202,4 @@ $(document).ready(function(){
 		$('body').find('iframe').attr('height', height);
 		$('body').find('iframe').attr('width', width);
 	});	
-
-	if(navigator.userAgent.match(/iPhone/i)){
-		alert("hello!");
-	}
 });
