@@ -145,13 +145,6 @@ $(document).ready(function(){
 	$('.artist').text(playlist[currentEp-1].artist);
 
 	$('#play').click(function(){
-		$('.wrapper').fadeOut(400);
-		$('#next').css("opacity", 0.2);
-		$('#previous').fadeTo("opacity", 0.2);
-		if(go==0){
-			go = 1;
-		}
-
 		if( navigator.userAgent.match(/Android/i)
  		 || navigator.userAgent.match(/webOS/i)
  		 || navigator.userAgent.match(/iPhone/i)
@@ -160,8 +153,14 @@ $(document).ready(function(){
 		 || navigator.userAgent.match(/BlackBerry/i)
 		 || navigator.userAgent.match(/Windows Phone/i)
  		){
-			window.location.href = 'https://www.youtube.com/watch?v=TeVUCFI5Io0';
+			window.location.href = 'https://www.youtube.com/watch?v='+playlist[currentEp-1].vid;
  		} else {
+ 			$('.wrapper').fadeOut(400);
+			$('#next').css("opacity", 0.2);
+			$('#previous').fadeTo("opacity", 0.2);
+			if(go==0){
+				go = 1;
+			}
  			player.loadVideoById(playlist[currentEp-1].vid);	
  		}
 	});
