@@ -153,7 +153,7 @@ $(document).ready(function(){
 		 || navigator.userAgent.match(/BlackBerry/i)
 		 || navigator.userAgent.match(/Windows Phone/i)
  		){
- 			document.getElementsById('player').style.display='none';
+ 			document.getElementById('player').style.display='none';
 			$('.wrapper').fadeOut(400);
 			window.location.href = 'https://www.youtube.com/watch?v='+playlist[currentEp-1].vid;
  		} 
