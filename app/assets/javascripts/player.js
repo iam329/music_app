@@ -191,4 +191,7 @@ $(document).ready(function(){
 		$('body').find('iframe').attr('width', width);
 	});	
 
+	if(navigator.userAgent.match(/iPhone/i)){
+		alert("hello!");
+	}
 });
