@@ -59,9 +59,8 @@ body {
 	height: 78.4px;
 	width: 73.6px;
 	margin: 70px auto 70px auto;
-	background: url('play.png');
-	background-repeat: no-repeat;
-	background-size: 90%;
+	background: url('play.png') 0 0 no-repeat;
+	background-size: 100%;
 	transition: transform 0.5s;
 }
 
