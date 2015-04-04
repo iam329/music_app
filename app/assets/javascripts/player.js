@@ -160,7 +160,7 @@ $(document).ready(function(){
 		 || navigator.userAgent.match(/BlackBerry/i)
 		 || navigator.userAgent.match(/Windows Phone/i)
  		){
-			alert(playlist[currentEp-1]);
+			window.location.href = 'https://www.youtube.com/watch?v=TeVUCFI5Io0';
  		} else {
  			player.loadVideoById(playlist[currentEp-1].vid);	
  		}
