@@ -64,10 +64,16 @@ var playlist = [
 		'title': 'We Don\'t Eat',
 		'artist': 'James Vincent McMorrow',
 		'vid': 'wayVq4BPS5Y'	
+	},
+	{
+		'episode': 12,
+		'title': 'Thieves',
+		'artist': 'The Beach',
+		'vid': 'VC13qNcTKJw'	
 	}
 ]
 
-var currentEp = 11;
+var currentEp = 12;
 
 // on opening scene go is 0 so that nextEp and prevEp only scroll through playlist carousel
 // once play button is hit go is set to 1 and nextEp and prevEp scroll and load vids
