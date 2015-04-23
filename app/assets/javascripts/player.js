@@ -165,9 +165,15 @@ $(document).ready(function(){
 		$('#next').css("opacity", 0.2);
 		$('#previous').fadeTo("opacity", 0.2);
 		
-				document.getElementById('player').style.visibility = "visible";
- 			player.loadVideoById(playlist[currentEp-1].vid);	
- 			player.playVideo();
+		document.getElementById('player').style.visibility = "visible";
+ 		
+ 		if(player){
+ 			player.cueVideoById(playlist[currentEp-1].vid);	
+ 			var play = function(){player.playVideo()};
+ 			setTimeout(play, 1000);
+ 		}
+ 			
+
 
 		// if( navigator.userAgent.match(/Android/i)
  	// 	 || navigator.userAgent.match(/webOS/i)
