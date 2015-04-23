@@ -150,6 +150,9 @@ function prevEp(){
 }
 
 $(document).ready(function(){
+	
+	document.getElementById('player').style.visibility = "hidden";
+
 	$('inner-wrapper').fadeIn(300);
 
 	$('.episode').text("Episode "+playlist[currentEp-1].episode);
@@ -176,6 +179,7 @@ $(document).ready(function(){
 			if(go==0){
 				go = 1;
 			}
+ 			document.getElementById('player').style.visibility = "visible";
  			player.loadVideoById(playlist[currentEp-1].vid);	
  		}
 	});
