@@ -166,7 +166,7 @@ $(document).ready(function(){
 		$('#previous').fadeTo("opacity", 0.2);
 		
 				document.getElementById('player').style.visibility = "visible";
- 			player.cueVideoById(playlist[currentEp-1].vid);	
+ 			player.loadVideoById(playlist[currentEp-1].vid);	
  			player.playVideo();
 
 		// if( navigator.userAgent.match(/Android/i)
