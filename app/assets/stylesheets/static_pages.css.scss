@@ -46,6 +46,19 @@ body {
 	vertical-align: middle;
 	height: 100%;
 	width: 100%;
+
+	opacity:0;  
+	 -webkit-animation:fadeIn ease-in 1;  
+	 -moz-animation:fadeIn ease-in 1;
+	 animation:fadeIn ease-in 1;
+	 
+	 -webkit-animation-fill-mode:forwards;  
+	 -moz-animation-fill-mode:forwards;
+	 animation-fill-mode:forwards;
+	 
+	 -webkit-animation-duration:2.75s;
+	 -moz-animation-duration:2.75s;
+	 animation-duration:2.75s;
 }
 
 .episode {
