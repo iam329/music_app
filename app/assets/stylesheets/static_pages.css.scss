@@ -12,7 +12,7 @@
 body {
 	text-align: center;
 	font-family: Seravek-ExtraLight,'Open Sans', sans-serif;
-	background-color: #5a0302;
+	background-color: #000;
 }
 
 .wrapper {	
@@ -25,13 +25,7 @@ body {
 	background: url('background.png');
 	background-repeat: no-repeat;
 	background-size: cover;
-}
 
-.inner-wrapper {
-	display: table-cell;
-	vertical-align: middle;
-	height: 100%;
-	width: 100%;
 
 	opacity:0;  
 	 -webkit-animation:fadeIn ease-in 1;  
@@ -42,9 +36,16 @@ body {
 	 -moz-animation-fill-mode:forwards;
 	 animation-fill-mode:forwards;
 	 
-	 -webkit-animation-duration:1s;
-	 -moz-animation-duration:1s;
-	 animation-duration:1s;
+	 -webkit-animation-duration:2s;
+	 -moz-animation-duration:2s;
+	 animation-duration:2s;
+}
+
+.inner-wrapper {
+	display: table-cell;
+	vertical-align: middle;
+	height: 100%;
+	width: 100%;
 }
 
 .episode {
