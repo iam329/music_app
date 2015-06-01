@@ -151,6 +151,8 @@ function prevEp(){
 
 $(document).ready(function(){
 
+	console.log("hello");
+
 	document.getElementById('player').style.visibility = "hidden";
 
 	$('inner-wrapper').fadeIn(300);
