@@ -151,77 +151,78 @@ function prevEp(){
 
 $(document).ready(function(){
 
-	console.log("hello");
-
 	document.getElementById('player').style.visibility = "hidden";
-
-	$('inner-wrapper').fadeIn(300);
 
 	$('.episode').text("Episode "+playlist[currentEp-1].episode);
 	$('.title').text("''"+playlist[currentEp-1].title+"''");
 	$('.artist').text(playlist[currentEp-1].artist);
 
-	$('#play').click(function(){
 
-		if( navigator.userAgent.match(/Android/i)
- 		 || navigator.userAgent.match(/webOS/i)
- 		 || navigator.userAgent.match(/iPhone/i)
-		 || navigator.userAgent.match(/iPad/i)
-		 || navigator.userAgent.match(/iPod/i)
-		 || navigator.userAgent.match(/BlackBerry/i)
-		 || navigator.userAgent.match(/Windows Phone/i)
- 		){
- 			document.getElementById('player').style.display='none';
-			$('.wrapper').fadeOut(400);
-			window.location.href = 'https://www.youtube.com/watch?v='+playlist[currentEp-1].vid;
- 		} 
- 		else {
- 			$('.wrapper').fadeOut(400);
-			$('#next').css("opacity", 0.2);
-			$('#previous').fadeTo("opacity", 0.2);
-			if(go==0){
-				go = 1;
-			}
 
- 			document.getElementById('player').style.visibility = "visible";
- 			player.loadVideoById(playlist[currentEp-1].vid);	
- 		}
-	});
+    document.body.onload = function() {
 
-	$('#next').click(function(){
-		nextEp();
-		$('.episode').text("Episode "+playlist[currentEp-1].episode);
-		$('.title').text("''"+playlist[currentEp-1].title+"''");
-		$('.artist').text(playlist[currentEp-1].artist);
-	});
+        $('#play').click(function(){
 
-	$('#previous').click(function(){
-		prevEp();
-		$('.episode').text("Episode "+playlist[currentEp-1].episode);
-		$('.title').text("''"+playlist[currentEp-1].title+"''");
-		$('.artist').text(playlist[currentEp-1].artist);
-	});
+            if( navigator.userAgent.match(/Android/i)
+                || navigator.userAgent.match(/webOS/i)
+                || navigator.userAgent.match(/iPhone/i)
+                || navigator.userAgent.match(/iPad/i)
+                || navigator.userAgent.match(/iPod/i)
+                || navigator.userAgent.match(/BlackBerry/i)
+                || navigator.userAgent.match(/Windows Phone/i)
+            ){
+                document.getElementById('player').style.display='none';
+                $('.wrapper').fadeOut(400);
+                window.location.href = 'https://www.youtube.com/watch?v='+playlist[currentEp-1].vid;
+            }
+            else {
+                $('.wrapper').fadeOut(400);
+                $('#next').css("opacity", 0.2);
+                $('#previous').fadeTo("opacity", 0.2);
+                if(go==0){
+                    go = 1;
+                }
 
-	$('#next').mouseenter(function(){
-		$('#next').css('opacity', 1);
-	});
+                document.getElementById('player').style.visibility = "visible";
+                player.loadVideoById(playlist[currentEp-1].vid);
+            }
+        });
 
-	$('#next').mouseleave(function(){
-		$('#next').css('opacity', 0.2);
-	});
+        $('#next').click(function(){
+            nextEp();
+            $('.episode').text("Episode "+playlist[currentEp-1].episode);
+            $('.title').text("''"+playlist[currentEp-1].title+"''");
+            $('.artist').text(playlist[currentEp-1].artist);
+        });
 
-	$('#previous').mouseenter(function(){
-		$('#previous').css('opacity', 1);
-	});
+        $('#previous').click(function(){
+            prevEp();
+            $('.episode').text("Episode "+playlist[currentEp-1].episode);
+            $('.title').text("''"+playlist[currentEp-1].title+"''");
+            $('.artist').text(playlist[currentEp-1].artist);
+        });
 
-	$('#previous').mouseleave(function(){
-		$('#previous').css('opacity', 0.2);
-	});
+        $('#next').mouseenter(function(){
+            $('#next').css('opacity', 1);
+        });
 
-	$(window).resize(function() {
-		var height = window.innerHeight;
-		var width = window.innerWidth;
-		$('body').find('iframe').attr('height', height);
-		$('body').find('iframe').attr('width', width);
-	});	
+        $('#next').mouseleave(function(){
+            $('#next').css('opacity', 0.2);
+        });
+
+        $('#previous').mouseenter(function(){
+            $('#previous').css('opacity', 1);
+        });
+
+        $('#previous').mouseleave(function(){
+            $('#previous').css('opacity', 0.2);
+        });
+
+        $(window).resize(function() {
+            var height = window.innerHeight;
+            var width = window.innerWidth;
+            $('body').find('iframe').attr('height', height);
+            $('body').find('iframe').attr('width', width);
+        });
+    }
 });
