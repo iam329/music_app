@@ -154,12 +154,8 @@ $(document).ready(function(){
 	document.getElementById('player').style.visibility = "hidden";
 
 	$('.episode').text("Episode "+playlist[currentEp-1].episode);
-	$('.title').text("''"+playlist[currentEp-1].title+"''");
+	$('.title').text(playlist[currentEp-1].title);
 	$('.artist').text(playlist[currentEp-1].artist);
-
-
-
-    document.body.onload = function() {
 
         $('#play').click(function(){
 
@@ -191,14 +187,14 @@ $(document).ready(function(){
         $('#next').click(function(){
             nextEp();
             $('.episode').text("Episode "+playlist[currentEp-1].episode);
-            $('.title').text("''"+playlist[currentEp-1].title+"''");
+            $('.title').text(playlist[currentEp-1].title);
             $('.artist').text(playlist[currentEp-1].artist);
         });
 
         $('#previous').click(function(){
             prevEp();
             $('.episode').text("Episode "+playlist[currentEp-1].episode);
-            $('.title').text("''"+playlist[currentEp-1].title+"''");
+            $('.title').text(playlist[currentEp-1].title);
             $('.artist').text(playlist[currentEp-1].artist);
         });
 
@@ -224,5 +220,5 @@ $(document).ready(function(){
             $('body').find('iframe').attr('height', height);
             $('body').find('iframe').attr('width', width);
         });
-    }
+    
 });
