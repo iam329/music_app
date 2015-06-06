@@ -173,6 +173,10 @@ body {
 	background: url('previous.png');
 	background-repeat: no-repeat;
 	opacity: 0.2;
+	-moz-user-select: none;
+  	-khtml-user-select: none;
+  	-webkit-user-select: none;
+  	user-select: none;
 }
 
 #next {
@@ -182,6 +186,10 @@ body {
 	background: url('next.png');
 	background-repeat: no-repeat;
 	opacity: 0.2;
+	-moz-user-select: none;
+  	-khtml-user-select: none;
+  	-webkit-user-select: none;
+  	user-select: none;
 }
 
 #previous:hover {
