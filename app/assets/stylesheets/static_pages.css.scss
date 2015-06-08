@@ -22,6 +22,15 @@ body {
   	user-select: none;
 }
 
+.phoenix-wrapper-active {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	z-index: 2000;
+	left: 100%;
+	background: red;
+}
+
 .wrapper {	
 	height: 100%;
 	width: 100%;
@@ -89,7 +98,7 @@ body {
 
 	-webkit-animation-fill-mode: forwards;
 	
-	-webkit-animation-duration: 1.25s;
+	-webkit-animation-duration: 1.75s;
 
 	-webkit-animation-delay: 1.25s;
 }
@@ -116,7 +125,7 @@ body {
 
 	-webkit-animation-fill-mode: forwards;
 	
-	-webkit-animation-duration: 1.25s;
+	-webkit-animation-duration: 1.75s;
 
 	-webkit-animation-delay: 1.4s; 
 }
@@ -229,7 +238,11 @@ body {
 
 	-webkit-animation-fill-mode: forwards;
 	
-	-webkit-animation-duration: 1.25s;
+	-webkit-animation-duration: 1.75s;
 
 	-webkit-animation-delay: 1.5s; 
+}
+
+.hidden {
+	visibility: hidden;
 }
