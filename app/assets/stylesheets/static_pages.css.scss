@@ -119,10 +119,9 @@ body {
 	font-size: 120px;
 	letter-spacing: 5px;
 	font-weight: bold; 
-}
-
-.tagLineMobile {
-	font-size: 50px;
+	overflow: hidden;
+	text-overflow: hidden;
+	white-space: nowrap;
 }
 
 .wrapper {	
