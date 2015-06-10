@@ -193,7 +193,7 @@ var tagLineInterval = setInterval(function(){
 		t=0;
 	} 
 	console.log(t);
-}, 400);
+}, 500);
 
 $(document).ready(function(){
 
