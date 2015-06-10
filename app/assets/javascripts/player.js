@@ -167,11 +167,12 @@ function prevEp(){
 //TODO: IF PURPLE, THEN SET TO BlUE
 
 var stripes = document.getElementsByClassName("stripe");
+var tagLines = ["Tape", "Deck", "Hero"];
+var t = 0;
 
 var colourInterval = setInterval(function(){
 	for(var i = 0; i<stripes.length; i++) {
 		if(stripes[i].className.indexOf("red")>-1){
-			console.log("hello");
 			stripes[i].className = stripes[i].className.replace("red", "");
 			stripes[i].className += "purple";
 		} else if(stripes[i].className.indexOf("blue")>-1){
@@ -183,6 +184,16 @@ var colourInterval = setInterval(function(){
 		}
 	}
 }, 200);
+
+var tagLineInterval = setInterval(function(){
+	if(t<tagLines.length){
+		document.getElementsByClassName("tagLine")[0].innerHTML = tagLines[t];
+		t++;	
+	} else {
+		t=0;
+	} 
+	console.log(t);
+}, 400);
 
 $(document).ready(function(){
 
