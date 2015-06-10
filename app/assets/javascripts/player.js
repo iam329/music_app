@@ -159,6 +159,31 @@ function prevEp(){
 //TODO: SET PHOENIX BOOLEAN TO FALSE
 //TODO: REPLAY ANIMATION FOR ANOTHER 5 SECONDS AND THEN EVALUATE IF STATEMENT AGAIN 
 
+
+//TODO: STRIPES ARRAY
+//TODO: FOR LOOP THROUGH STRIPES
+//TODO: IF RED, THEN SET TO PURPLE
+//TODO: IF BLUE, THEN SET TO RED
+//TODO: IF PURPLE, THEN SET TO BlUE
+
+var stripes = document.getElementsByClassName("stripe");
+
+var colourInterval = setInterval(function(){
+	for(var i = 0; i<stripes.length; i++) {
+		if(stripes[i].className.indexOf("red")>-1){
+			console.log("hello");
+			stripes[i].className = stripes[i].className.replace("red", "");
+			stripes[i].className += "purple";
+		} else if(stripes[i].className.indexOf("blue")>-1){
+			stripes[i].className = stripes[i].className.replace("blue", "");
+			stripes[i].className += "red";
+		} else if(stripes[i].className.indexOf("purple")>-1){
+			stripes[i].className = stripes[i].className.replace("purple", "");
+			stripes[i].className += "blue";
+		}
+	}
+}, 200);
+
 $(document).ready(function(){
 
 	document.getElementById('player').style.visibility = "hidden";
