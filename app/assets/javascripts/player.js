@@ -183,7 +183,7 @@ var colourInterval = setInterval(function(){
 			stripes[i].className += "blue";
 		}
 	}
-}, 150);
+}, 250);
 
 var tagLineInterval = setInterval(function(){
 	if(t<tagLines.length){
